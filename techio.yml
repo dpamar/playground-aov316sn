@@ -2,3 +2,8 @@ title: Custom Template
 plan:
 - title: Welcome
   statement: markdowns/welcome.md
+- title: Load instructions
+  statement: markdowns/load.md
+- title: Fetch next instruction
+  statement: markdowns/fetch.md
+
