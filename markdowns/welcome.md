@@ -3,6 +3,7 @@
 This playground is my third one about the BrainFuck language. See 
 * [Getting started with BrainFuck](https://tech.io/playgrounds/50426/getting-started-with-brainfuck/welcome)
 * [BrainFuck part 2 - Working with arrays](https://tech.io/playgrounds/50443/brainfuck-part-2---working-with-arrays/welcome)
+
 playgrounds if you didn't already !
 
 The goal of this playground is to write a BF interpreter... in BF !
@@ -52,6 +53,7 @@ Both are possible : the stack allows a virtually infinite number nested loops, b
 Hence, we will have 2 flags / registers : _inactive_ flag and _direction_ flag
 * inactive indicates if code can be run or not
 * direction indicates whether instructions are read from left to right or right to left
+
 Then
 * if inactive is not null
   * execution of [ : increase inactive flag by 1
