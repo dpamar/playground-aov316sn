@@ -7,6 +7,8 @@ Given an instruction pointer, the fetch is an operation that gives us the operat
 Then, it's simpler to have a one-based index. We can just start a loop on this value that won't be null, and loop indefinitely on next task.
 Access an element in this case is not complex either, the pointer value just need to be decreased by a given offset (1).
 
+Note: this limits us to interpreted programs up to 255 chars of code (becode it's the index limit). We'll improve this behavior later
+
 # Let's start
 
 * Memory: 0, 0, 0, _instructions_, 0, _instruction pointer_
