@@ -78,7 +78,7 @@ _Note_: this has been written like this to ease readability, but actually we can
 
 This program reads the code and fetch instructions (previous parts), then print inscrutctions (without comments).
 
-Note: this is a very handy "BF code minifier", written in BF :)
+Note: this is a very handy "BF code minifier", written in BF :) But, as mentionned earlier, it's still limited to 255 chars (the instruction pointer limit)
 
 ```
 >>>,[>+++++[-<------->]+<[>,>]>[[-]>]<<]>               load all instructions (until end of input or 35)

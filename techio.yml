@@ -6,4 +6,8 @@ plan:
   statement: markdowns/load.md
 - title: Fetch next instruction
   statement: markdowns/fetch.md
+- title: Switch/case on instructions
+  statement: markdowns/switch.md
+- title: Memory, left and right
+  statement: markdowns/memory.md
 
