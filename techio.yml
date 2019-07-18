@@ -16,4 +16,6 @@ plan:
   statement: markdowns/loops.md
 - title: Inactive and direction flags
   statement: markdowns/inactive_and_direction.md
+- title: Completed
+  statement: markdowns/completed.md
 
