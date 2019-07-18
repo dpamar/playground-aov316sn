@@ -2,13 +2,15 @@
 
 So, we have a working interpreter, coded using 1137 instructions, and that performs about 80.000 operations to execute a single instruction. Let's do better !
 
-Moreover, our code size is limited to 255 instructions, so does our memory accesses. We also need to fix this !
+Moreover, our code size is limited to 255 instructions, so is our memory accesses. We also need to fix this !
 
 Fortunately, these problems all have the same solution.
-* The most expensive part while interpreting BF using our tool is all the operations done to access a value in memory (shift all the array, then shift it back)
+* The most expensive part while interpreting BF using our tool consists in all the operations done to access a value in memory (shift all the array, then shift it back). 4N shifts in total to get Nth item
 * The second most expensive part is exactly the same, while accessing instructions (shift all the array, then shift it back)
 
-The trick is that we don't really need random accesses on these 2 arrays. Instruction pointer and memory pointer are useful to get any value from those 2 arrays, but we can instead
+The trick is that we don't really need *random* accesses on these 2 arrays. We need to access *current* value, and sometimes move along array to change what *current* means.
+
+Instruction pointer and memory pointer are useful to get any value from those 2 arrays, but we can instead
 * replace a single array by 2 _beforeArray_ and _afterArray_
 * say that the *current* item is the first of the _afterArray_
 
@@ -125,27 +127,27 @@ loop 93/58
                   >>>>>+>[>>]>>>[<<<<<[<<]>->[>>]>]<[<<]<<[<<]>[-<<<+>>>]<<<<<
                 ]>
               ]<[-
-                instruction right
+                instruction right (a bit longer now : move the first cell of 2nd array to then end of 1st one)
                 >>>>>>[>>]+>>[-]>[-<<+>>]>[-]+<<<<[<<]<<<<
               ]>
             ]<[-
-              instruction left
+              instruction left (the exact opposite)
               >>>>>>[>>]+<[->>+<<]<[-]<<[<<]<<<<
             ]>
           ]<[-
-            instruction print
+            instruction print (really faster : go and print)
             >>>>>>[>>]>>>.<<<<<[<<]<<<<
           ]>
         ]<[-
-          instruction dec
+          instruction dec (idem)
           >>>>>>[>>]>>>-<<<<<[<<]<<<<
         ]>
       ]<[-
-        instruction read
+        instruction read (idem)
         >>>>>>[>>]>>>,<<<<<[<<]<<<<
       ]>
     ]<[-
-      instruction inc
+      instruction inc (idem)
       >>>>>>[>>]>>>+<<<<<[<<]<<<<
     ]>
     clear instruction
