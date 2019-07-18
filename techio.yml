@@ -1,4 +1,4 @@
-title: Custom Template
+title: BrainFuck part 3 - Write a BF interpreter in BF
 plan:
 - title: Welcome
   statement: markdowns/welcome.md
@@ -18,4 +18,6 @@ plan:
   statement: markdowns/inactive_and_direction.md
 - title: Completed
   statement: markdowns/completed.md
+- title: Improved
+  statement: markdowns/improved.md
 
