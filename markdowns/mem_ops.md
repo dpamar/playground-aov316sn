@@ -41,21 +41,21 @@ Do the job
 <<<<<<                               Go back to instruction value cell
 ```
 
-# Minified version (add)
+# Minified version (inc)
 
 ```
 >>>>[->+>+<<]>>[-<<+>>]<+[>>>[>>]    Reach target
 +>>[-]>[-<<+>>]<<<[<<]<-]>>>[>>]<
-  +                                  Do the job (add)
+  +                                  Do the job (inc)
 <[[->>+<<]>[->>+<<]<<<]<<<<<<        cleansing
 ```
 
-# Minified version (sub)
+# Minified version (dec)
 
 ```
 >>>>[->+>+<<]>>[-<<+>>]<+[>>>[>>]    Reach target
 +>>[-]>[-<<+>>]<<<[<<]<-]>>>[>>]<
-  -                                  Do the job (sub)
+  -                                  Do the job (dec)
 <[[->>+<<]>[->>+<<]<<<]<<<<<<        cleansing
 ```
 
