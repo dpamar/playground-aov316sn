@@ -12,4 +12,6 @@ plan:
   statement: markdowns/memory.md
 - title: Memory manipulations (add, sub, print, read)
   statement: markdowns/mem_ops.md
+- title: Loops
+  statement: markdowns/loops.md
 

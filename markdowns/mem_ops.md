@@ -33,7 +33,7 @@ To reach the target Nth memory cell, we will move the first Nth memory cells to 
 [                                    While targetIndex is not null
   >>>[>>]+>>                         Go through memoryA and reach memoryB (note : the target cell flag is set on the fly)
   [-]>[-<<+>>]                       Reset target cell flag from the source, and move value from source to destination
-  <<<[<<]<<-                         Decrease target index
+  <<<[<<]<-                          Decrease target index
 ]
 >>>[>>]<                             Reach target cell value
 Do the job
@@ -44,8 +44,8 @@ Do the job
 # Minified version (add)
 
 ```
->>>>[->+>+<<]>>[-<<+>>]<+[>>>[>>]+   Reach target
->>[-]>[-<<+>>]<<<[<<]<<-]>>>[>>]<
+>>>>[->+>+<<]>>[-<<+>>]<+[>>>[>>]    Reach target
++>>[-]>[-<<+>>]<<<[<<]<-]>>>[>>]<
   +                                  Do the job (add)
 <[[->>+<<]>[->>+<<]<<<]<<<<<<        cleansing
 ```
@@ -53,8 +53,8 @@ Do the job
 # Minified version (sub)
 
 ```
->>>>[->+>+<<]>>[-<<+>>]<+[>>>[>>]+   Reach target
->>[-]>[-<<+>>]<<<[<<]<<-]>>>[>>]<
+>>>>[->+>+<<]>>[-<<+>>]<+[>>>[>>]    Reach target
++>>[-]>[-<<+>>]<<<[<<]<-]>>>[>>]<
   -                                  Do the job (sub)
 <[[->>+<<]>[->>+<<]<<<]<<<<<<        cleansing
 ```
@@ -62,8 +62,8 @@ Do the job
 # Minified version (read)
 
 ```
->>>>[->+>+<<]>>[-<<+>>]<+[>>>[>>]+   Reach target
->>[-]>[-<<+>>]<<<[<<]<<-]>>>[>>]<
+>>>>[->+>+<<]>>[-<<+>>]<+[>>>[>>]    Reach target
++>>[-]>[-<<+>>]<<<[<<]<-]>>>[>>]<
   ,                                  Do the job (read)
 <[[->>+<<]>[->>+<<]<<<]<<<<<<        cleansing
 ```
@@ -72,15 +72,15 @@ Do the job
 # Minified version (print)
 
 ```
->>>>[->+>+<<]>>[-<<+>>]<+[>>>[>>]+   Reach target
->>[-]>[-<<+>>]<<<[<<]<<-]>>>[>>]<
+>>>>[->+>+<<]>>[-<<+>>]<+[>>>[>>]    Reach target
++>>[-]>[-<<+>>]<<<[<<]<-]>>>[>>]<
   .                                  Do the job (print)
 <[[->>+<<]>[->>+<<]<<<]<<<<<<        cleansing
 ```
 
 # Final state
 
-* Memory: 0, 0, 0, _instructions_, 0, _instruction pointer_, 0, 0, _inactive flag_, _direction flag_, _memory pointer_, 0, 0, 0, 0, 0, _memory_* Memory:  
+* Memory: 0, 0, 0, _instructions_, 0, _instruction pointer_, 0, 0, _inactive flag_, _direction flag_, _memory pointer_, 0, 0, 0, 0, 0, _memory_
 * Cursor: after instruction pointer 
 * Input: unchanged, unless instruction was read
 * Output: unchanged, unless instruction was print
