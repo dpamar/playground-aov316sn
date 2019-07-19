@@ -19,7 +19,7 @@
 ```
 ```
 
-Minified version
+# Minified version
 ```
 ```
 
